@@ -1,4 +1,16 @@
-function convertTanggalBySelf(tanggal) {
+import moment from "moment";
+
+export function convertTanggalByMoment(tanggal) {
+    const date = moment(tanggal, "DD-MM-YYYY", true);
+    if (!date.isValid()) {
+        console.log("Format tanggal salah");
+        return;
+    }
+
+    return date.format("DD/MM/YYYY");
+}
+
+export function convertTanggalBySelf(tanggal) {
 
     let split_tanggal = tanggal.split("-");
     split_tanggal = split_tanggal.map((d) =>{
@@ -24,5 +36,3 @@ function convertTanggalBySelf(tanggal) {
     return `${split_tanggal[0].raw}/${split_tanggal[1].raw}/${split_tanggal[2].raw}`;
 
 }
-
-export default convertTanggalBySelf;
