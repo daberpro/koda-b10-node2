@@ -9,7 +9,7 @@ async function getInputAndConvert() {
     tanggal = await rl.question("Masukan tanggal dengan format DD-MM-YYYY: ");
     rl.close();
 
-    console.log(`tanggal yang dimasukan: ${tanggal}`)
+    console.log(`tanggal yang dimasukan: ${tanggal}`);
     console.log(convertTanggalBySelf(tanggal));
     console.log(convertTanggalByMoment(tanggal));
 
