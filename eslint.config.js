@@ -19,7 +19,8 @@ export default defineConfig([
       "@stylistic/object-curly-newline": ["error", { "multiline": true }],
       "@stylistic/block-spacing": "error",
       "@stylistic/eol-last": ["error", "always"],
-      "@stylistic/comma-spacing": ["error", { "before": false, "after": true }]
+      "@stylistic/comma-spacing": ["error", { "before": false, "after": true }],
+      "camelcase": "error"
     } 
   },
 ]);
