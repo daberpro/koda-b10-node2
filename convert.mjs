@@ -12,27 +12,27 @@ export function convertTanggalByMoment(tanggal) {
 
 export function convertTanggalBySelf(tanggal) {
 
-    let split_tanggal = tanggal.split("-");
-    split_tanggal = split_tanggal.map((d) =>{
+    let splitTanggal = tanggal.split("-");
+    splitTanggal = splitTanggal.map((d) =>{
         return {
             raw: d,
             value: Number(d)
         };
     });
 
-    if (split_tanggal.length < 3 || split_tanggal.length > 3 ||
-        Number.isNaN(split_tanggal[0].value) || Number.isNaN(split_tanggal[1].value) ||Number.isNaN(split_tanggal[2].value) 
-        || split_tanggal[0].value > 31 || split_tanggal[1].value > 12 
-        || split_tanggal[0].value == 0 || split_tanggal[1].value == 0 
-        || split_tanggal[2].value == 0 || split_tanggal[0].raw.length < 2 
-        || split_tanggal[0].raw.length > 2 || split_tanggal[1].raw.length < 2 
-        || split_tanggal[1].raw.length > 2 || split_tanggal[2].raw.length < 4 
-        || split_tanggal[2].raw.length > 4
+    if (splitTanggal.length < 3 || splitTanggal.length > 3 ||
+        Number.isNaN(splitTanggal[0].value) || Number.isNaN(splitTanggal[1].value) ||Number.isNaN(splitTanggal[2].value) 
+        || splitTanggal[0].value > 31 || splitTanggal[1].value > 12 
+        || splitTanggal[0].value == 0 || splitTanggal[1].value == 0 
+        || splitTanggal[2].value == 0 || splitTanggal[0].raw.length < 2 
+        || splitTanggal[0].raw.length > 2 || splitTanggal[1].raw.length < 2 
+        || splitTanggal[1].raw.length > 2 || splitTanggal[2].raw.length < 4 
+        || splitTanggal[2].raw.length > 4
     ) {
         console.log("Format tanggal salah");
         return;
     }
 
-    return `${split_tanggal[0].raw}/${split_tanggal[1].raw}/${split_tanggal[2].raw}`;
+    return `${splitTanggal[0].raw}/${splitTanggal[1].raw}/${splitTanggal[2].raw}`;
 
 }
